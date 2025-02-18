@@ -11,8 +11,10 @@ app.use(express.json());
 require('./DBConn/conn');
 
 const GymRoutes = require('./Routes/gym');
+const MembershipRoutes = require('./Routes/membership');
 
 app.use('/auth',GymRoutes)
+app.use('/plans',MembershipRoutes)
 
 app.listen(PORT, () => {
     console.log("Server is running on port 3000 ")

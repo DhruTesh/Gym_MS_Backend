@@ -1,4 +1,4 @@
-const Gym = require('../Models/gym');
+const Gym = require('../Modals/gym')
 const jwt = require('jsonwebtoken');
 
 
