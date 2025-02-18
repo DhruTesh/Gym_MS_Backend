@@ -8,5 +8,6 @@ router.post('/login',GymController.login);
 router.post('/reset-password/sendOtp',GymController.sendOtp);
 router.post('/reset-password/checkOtp',GymController.checkOtp);
 router.post('/reset-password/resetPassword',GymController.resetPassword);
+router.post('/logout',GymController.logout)
 
 module.exports = router;
