@@ -56,9 +56,11 @@ exports.registerMember = async (req, res) => {
     try {
         const { name, mobileNo, address, gender, membership, profilePic, joiningDate } = req.body;
         const member = await Member.findOne({ gym: req.gym._id, mobileNo });
+        
         if (member) {
             return res.status(409).json({ error: 'Already registered with this Mobile No' });
         }
+
         const memberShip = await Membership.findOne({ _id: membership, gym: req.gym._id });
         const membershipMonth = memberShip.months;
         if (memberShip) {
